@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <!--Logo-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logo"/>
+            <TextView
+                android:id="@+id/logoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/logoImage"
+                android:layout_marginStart="8dp"
+                android:layout_alignTop="@id/logoImage"
+                android:text="GoWaste"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Judul Form -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Daftar"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <!-- Deskripsi Form -->
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lengkapi data dirimu dibawah ini"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Input Nama -->
+        <EditText
+            android:id="@+id/inputNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama kamu"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Input Nomor HP -->
+        <EditText
+            android:id="@+id/inputNomorHP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor HP kamu"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Input Alamat -->
+        <EditText
+            android:id="@+id/inputAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat kamu"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- LinearLayout untuk Tempat Lahir & Tanggal Lahir -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/inputTempatLahir"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Tempat Lahir"
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:elevation="2dp"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/inputTanggalLahir"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="DD/MM/YYYY"
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:elevation="2dp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Input Password -->
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="textPassword"/>
+
+        <!-- Checkbox Persetujuan -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <CheckBox
+                android:id="@+id/checkPersetujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textPersetujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dengan ini kamu setuju datamu bocor"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Tombol Daftar -->
+        <Button
+            android:id="@+id/btnDaftar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Daftar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#28a745"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
